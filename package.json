@@ -1,0 +1,41 @@
+{
+  "name": "api-rest-nodejs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "knex:help": "node --import tsx ./node_modules/knex/bin/cli.js --help",
+    "knex:migrate:make": "node --import tsx ./node_modules/knex/bin/cli.js migrate:make",
+    "knex:migrate:latest": "node --import tsx ./node_modules/knex/bin/cli.js migrate:latest",
+    "knex:migrate:up": "node --import tsx ./node_modules/knex/bin/cli.js migrate:up",
+    "knex:migrate:rollback": "node --import tsx ./node_modules/knex/bin/cli.js migrate:rollback",
+    "knex:migrate:down": "node --import tsx ./node_modules/knex/bin/cli.js migrate:down",
+    "knex:migrate:currentVersion": "node --import tsx ./node_modules/knex/bin/cli.js migrate:currentVersion",
+    "knex:migrate:list": "node --import tsx ./node_modules/knex/bin/cli.js migrate:list",
+    "knex:migrate:status": "node --import tsx ./node_modules/knex/bin/cli.js migrate:status",
+    "knex:migrate:unlock": "node --import tsx ./node_modules/knex/bin/cli.js migrate:unlock",
+    "test": "npx vitest",
+    "build":"tsup src --out-dir build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^22.13.14",
+    "@types/supertest": "^6.0.3",
+    "supertest": "^7.1.0",
+    "tsup": "^8.4.0",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2",
+    "vitest": "^3.1.1"
+  },
+  "dependencies": {
+    "@fastify/cookie": "^11.0.2",
+    "dotenv": "^16.4.7",
+    "fastify": "^5.2.2",
+    "knex": "^3.1.0",
+    "sqlite3": "^5.1.7",
+    "zod": "^3.24.2"
+  }
+}
